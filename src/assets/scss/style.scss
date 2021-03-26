@@ -1,0 +1,58 @@
+@import "vars";
+@import "mixins";
+@import "vendors/normalize";
+@import "vendors/visually-hidden";
+
+/* font awesome styles */
+@import "vendors/fontawesome/fontawesome";
+@import "vendors/fontawesome/variables";
+@import "vendors/fontawesome/mixins";
+@import "vendors/fontawesome/solid";
+@import "vendors/fontawesome/brands";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: $gray;
+
+  font-family: $font-regular;
+  font-size: 1.6rem;
+  color: $black;
+}
+
+a {
+  outline: none;
+  text-decoration: none;
+  color: $white;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+.fas {
+  color: $white;
+}
+
+/* Blocks */
+@import "blocks/page";
+@import "blocks/container";
+@import "blocks/btn";
+@import "blocks/header";
+@import "blocks/hero";
+@import "blocks/about";
+@import "blocks/features";
+@import "blocks/cases";
+@import "blocks/blog";
+@import "blocks/team";
+@import "blocks/contact";
+@import "blocks/footer";

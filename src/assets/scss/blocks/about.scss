@@ -1,0 +1,54 @@
+.about {
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+  background-color: $white;
+
+  &__item {
+    text-align: center;
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__card {
+    position: relative;
+    font-size: 18px;
+    padding-top: 75px;
+
+    &::before {
+      position: absolute;
+      display: block;
+      content: "";
+      width: 64px;
+      height: 64px;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      border-radius: 50%;
+
+      background-color: $green;
+    }
+
+    .fas {
+      position: absolute;
+      top: 15px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: $white;
+      font-size: 34px;
+    }
+
+    &-title {
+      @extend %subtitle;
+      color: $black;
+      margin-bottom: 15px;
+    }
+
+    &-text {
+      @extend %text;
+      color: $black;
+    }
+  }
+}

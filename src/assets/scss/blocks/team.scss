@@ -1,0 +1,46 @@
+.team {
+  color: $black;
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  background-color: $white;
+
+  &__uptitle {
+    @extend %subtitle;
+    margin-bottom: 15px;
+  }
+
+  &__title {
+    @extend %title;
+    margin-bottom: 35px;
+  }
+
+  &__text {
+    @extend %text;
+    margin-bottom: 35px;
+  }
+
+  &__member {
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+
+    &-avatar {
+      @extend %image;
+      margin-bottom: 15px;
+    }
+
+    &-name {
+      @extend %text;
+      font-size: 23px;
+      line-height: 29px;
+
+      margin-bottom: 10px;
+    }
+
+    &-position {
+      @extend %text;
+    }
+  }
+}

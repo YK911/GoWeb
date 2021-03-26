@@ -1,0 +1,16 @@
+@mixin breakpoint($br) {
+    @media screen and (min-width: $br) {
+      @content;
+    }
+  }
+
+@mixin retina2x($pxr-2x, $dpi-2x, $dpp-2x) {
+  @media only screen and (min-device-pixel-ratio: $px), (min-resolution: $dpi), (                min-resolution: $dpp-2x) {
+    @content;
+  }
+}
+@mixin retina3x($pxr-2x, $dpi-2x, $dpp-2x) {
+  @media only screen and (min-device-pixel-ratio: $px), (min-resolution: $dpi), (                min-resolution: $dpp-2x) {
+    @content;
+  }
+}

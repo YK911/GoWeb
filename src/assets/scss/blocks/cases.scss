@@ -1,0 +1,25 @@
+.cases {
+  color: $black;
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 46px;
+
+  background-color: $white;
+
+  &__uptitle {
+    @extend %subtitle;
+    margin-bottom: 15px;
+  }
+
+  &__title {
+    @extend %title;
+    padding-left:20px;
+    padding-right:20px;
+    margin-bottom: 35px;
+  }
+
+  &__text {
+      @extend %text;
+      margin-bottom: 37px;
+  }
+}

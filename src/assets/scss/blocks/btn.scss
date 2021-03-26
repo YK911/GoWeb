@@ -1,0 +1,20 @@
+.btn {
+  display: inline-block;
+  @extend %text;
+  color: $white;
+  padding: 10px 30px 10px 26px;
+  border-radius: 5px;
+  background-color: transparent;
+  border: 1px solid $white;
+
+
+  &--green {
+    background-color: $green;
+    border: none;
+  }
+
+  &--form {
+    line-height: 22px;
+    padding: 10px 110px;
+  }
+}

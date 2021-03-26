@@ -1,0 +1,78 @@
+@import "_fonts";
+
+/* COLORS */
+$black:    #333333;
+$white:    #ffffff;
+$gray:     #6b6f7a;
+$whisper:  #E9E9E9;
+$green:    #28A745;
+$blue:     #0284D0;
+$bgd-main: #E5E5E5;
+$bgd-form: #F4F4F4;
+
+$font-regular: "Open Sans";
+$font-light: "Open Sans Light";
+
+$z-index-header: 1000;
+
+/* BREAKPOINTS */
+$tablet-bp: 768px;
+$desktop-bp: 1200px;
+
+/* RETINA SCREEN @2*/
+$pxr-2x: 2;
+$pxr-3x: 3;
+$dpi-2x: 192dpi;
+$dpi-3x: 288dpi;
+$dpp-2x: 2dppx;
+$dpp-3x: 3dppx;
+
+/* PLACEHOLDERS */
+// %section-indents-mob {
+//   padding-top: 3.5rem;
+//   padding-bottom: 7rem;
+// }
+
+// %section-indents-tab {
+//   padding-top: 4rem;
+//   padding-bottom: 8rem;
+// }
+
+// %section-indents-pc {
+//   padding-top: 7.5rem;
+//   padding-bottom: 13rem;
+// }
+
+%title {
+  font-family: $font-light;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 3.8rem;
+  line-height: 4.8rem;
+}
+
+%subtitle {
+  font-family: $font-regular;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.8rem;
+  line-height: 3rem;
+}
+
+%text {
+  font-family: $font-regular;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 2.6rem;
+}
+
+%image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* FONTAWESOME */
+$fa-font-path: "../fonts/fontawesome"

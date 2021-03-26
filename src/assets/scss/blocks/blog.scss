@@ -1,0 +1,22 @@
+.blog {
+  color: $white;
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+  background-color: $blue;
+
+  &__uptitle {
+    @extend %subtitle;
+    margin-bottom: 5px;
+  }
+
+  &__title {
+    @extend %title;
+    margin-bottom: 25px;
+  }
+
+  &__text {
+    @extend %text;
+    margin-bottom: 15px;
+  }
+}

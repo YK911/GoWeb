@@ -1,0 +1,45 @@
+.hero {
+  text-align: center;
+  padding-top: 145px;
+  padding-bottom: 95px;
+
+  background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.4),
+      rgba(0, 0, 0, 0.4)
+    ),
+    url(../images/mobile/home/showcase.jpg);
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  background-color: #333333;
+
+  &__title {
+    @extend %title;
+    font-size: 52px;
+    line-height: 66px;
+    color: $whisper;
+    margin-bottom: 16px;
+  }
+
+  &__subtitle {
+    @extend %subtitle;
+    font-size: 22px;
+    line-height: 37px;
+    color: $whisper;
+    margin-bottom: 25px;
+  }
+
+  .btn {
+    &:before {
+      @extend %fa-icon;
+      @extend .fas;
+      content: fa-content($fa-var-angle-right);
+      width: 9px;
+      height: 18px;
+      padding-right: 5px;
+    }
+  }
+}
