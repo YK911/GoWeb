@@ -21,6 +21,17 @@
     }
   }
 
+  &--arrow {
+    &:before {
+      @extend %fa-icon;
+      @extend .fas;
+      content: fa-content($fa-var-angle-right);
+      width: 9px;
+      height: 18px;
+      padding-right: 5px;
+    }
+  }
+
   @include breakpoint($tablet-bp) {
     font-size: 18px;
     line-height: 28px;

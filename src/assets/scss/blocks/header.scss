@@ -1,18 +1,29 @@
 .header {
   position: absolute;
   display: block;
-  max-width: 100%;
-  top: 10px;
+  width: 100%;
+  top: 20px;
   left: 50%;
   transform: translateX(-50%);
   z-index: $z-index-header;
+
+  @include breakpoint($tablet-bp) {
+    top: 11px;
+  }
 }
 
 .nav {
-  display: inline-flex;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  @include breakpoint($tablet-bp) {
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
 }
 
 .nav__logo {
@@ -22,17 +33,20 @@
   margin-bottom: 10px;
 
   cursor: pointer;
+  transition: transform .4s ease-in-out;
 
   &--green {
     color: $green;
   }
-}
 
-.nav__link {
-  @extend %text;
+  &:hover,
+  :focus {
+    transform: scale(1.1);
+  }
 
-  &--active {
-    border-bottom: 2px solid $green;
+  @include breakpoint($tablet-bp) {
+    font-size: 35px;
+    margin-bottom: 0;
   }
 }
 
@@ -41,16 +55,40 @@
   justify-content: space-between;
   align-items: center;
   width: 286px;
+
+  @include breakpoint($tablet-bp) {
+    width: 328px;
+  }
+
+  @include breakpoint($desktop-bp) {
+    width: 410px;
+  }
 }
 
-.icon-book-open {
-  @extend %fa-icon;
-  @extend .fas;
-
-  &::before {
-    content: fa-content($fa-var-book-open);
-    // content: "\f518";
-    font-size: 35px;
-    color: $green;
+.nav__item {
+  &:hover {
+    .nav__link {
+      border-bottom: 2px solid $green;
+    }
   }
+}
+
+.nav__link {
+  @extend %text;
+  transition: transform .4s ease-in-out;
+
+  &--active {
+    border-bottom: 2px solid $green;
+  }
+
+  @include breakpoint($tablet-bp) {
+    font-size: 18px;
+    line-height: 28px;
+  }
+}
+
+/* HEADER SECTION ICONS */
+.fa-book-open {
+  font-size: 35px;
+  color: $green;
 }

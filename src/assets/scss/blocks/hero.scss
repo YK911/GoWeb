@@ -90,12 +90,5 @@
 }
 
 .btn {
-  &:before {
-    @extend %fa-icon;
-    @extend .fas;
-    content: fa-content($fa-var-angle-right);
-    width: 9px;
-    height: 18px;
-    padding-right: 5px;
-  }
+
 }

@@ -383,8 +383,7 @@ template {
  */
 .fa,
 .fas,
-.icon-book-open,
-.btn:before,
+.btn--arrow:before,
 .about__item::before,
 .far,
 .fal,
@@ -398,7 +397,7 @@ template {
   text-rendering: auto;
   line-height: 1; }
 
-.icon-book-open, .btn:before, .about__item::before {
+.btn--arrow:before, .about__item::before {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   display: inline-block;
@@ -479,8 +478,7 @@ template {
 
 .fa.fa-pull-left,
 .fas.fa-pull-left,
-.fa-pull-left.icon-book-open,
-.fa-pull-left.btn:before,
+.fa-pull-left.btn--arrow:before,
 .fa-pull-left.about__item::before,
 .far.fa-pull-left,
 .fal.fa-pull-left,
@@ -489,8 +487,7 @@ template {
 
 .fa.fa-pull-right,
 .fas.fa-pull-right,
-.fa-pull-right.icon-book-open,
-.fa-pull-right.btn:before,
+.fa-pull-right.btn--arrow:before,
 .fa-pull-right.about__item::before,
 .far.fa-pull-right,
 .fal.fa-pull-right,
@@ -4976,8 +4973,7 @@ readers do not read off random characters that represent icons */
 
 .fa,
 .fas,
-.icon-book-open,
-.btn:before,
+.btn--arrow:before,
 .about__item::before {
   font-family: 'Font Awesome 5 Free';
   font-weight: 900; }
@@ -5023,8 +5019,7 @@ ol {
 
 
 .fas,
-.icon-book-open,
-.btn:before,
+.btn--arrow:before,
 .about__item::before {
   color: #ffffff; }
 
@@ -5143,46 +5138,81 @@ ol {
     @media screen and (min-width: 768px) {
       .btn--form {
         line-height: 25px; } }
+  .btn--arrow:before {
+    content: "\f105";
+    width: 9px;
+    height: 18px;
+    padding-right: 5px; }
   @media screen and (min-width: 768px) {
     .btn {
       font-size: 18px;
       line-height: 28px; } }
 
 .header {
-  position: fixed;
+  position: absolute;
   display: block;
-  max-width: 100%;
-  top: 0;
+  width: 100%;
+  top: 20px;
   left: 50%;
   transform: translateX(-50%);
-  padding-top: 10px;
   z-index: 1000; }
+  @media screen and (min-width: 768px) {
+    .header {
+      top: 11px; } }
 
 .nav {
-  display: inline-flex;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center; }
+  @media screen and (min-width: 768px) {
+    .nav {
+      flex-direction: row;
+      justify-content: space-between;
+      padding-left: 40px;
+      padding-right: 40px; } }
 
 .nav__logo {
   font-size: 32px;
   line-height: 42px;
   margin-bottom: 10px;
-  cursor: pointer; }
+  cursor: pointer;
+  transition: transform .4s ease-in-out; }
   .nav__logo--green {
     color: #28a745; }
-
-.nav__link--active {
-  border-bottom: 2px solid #28a745; }
+  .nav__logo:hover,
+  .nav__logo :focus {
+    transform: scale(1.1); }
+  @media screen and (min-width: 768px) {
+    .nav__logo {
+      font-size: 35px;
+      margin-bottom: 0; } }
 
 .nav__list {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 286px; }
+  @media screen and (min-width: 768px) {
+    .nav__list {
+      width: 328px; } }
+  @media screen and (min-width: 1200px) {
+    .nav__list {
+      width: 410px; } }
 
-.icon-book-open::before {
-  content: "\f518";
+.nav__item:hover .nav__link {
+  border-bottom: 2px solid #28a745; }
+
+.nav__link--active {
+  border-bottom: 2px solid #28a745; }
+
+@media screen and (min-width: 768px) {
+  .nav__link {
+    font-size: 18px;
+    line-height: 28px; } }
+
+/* HEADER SECTION ICONS */
+.fa-book-open {
   font-size: 35px;
   color: #28a745; }
 
@@ -5254,12 +5284,6 @@ ol {
   @media screen and (min-width: 768px) {
     .hero__subtitle {
       margin-bottom: 29px; } }
-
-.btn:before {
-  content: "\f105";
-  width: 9px;
-  height: 18px;
-  padding-right: 5px; }
 
 .about {
   padding-top: 30px;
