@@ -7,14 +7,22 @@
   background-color: transparent;
   border: 1px solid $white;
 
-
   &--green {
     background-color: $green;
     border: none;
   }
 
   &--form {
+    width: 100%;
     line-height: 22px;
-    padding: 10px 110px;
+
+    @include breakpoint($tablet-bp) {
+      line-height: 25px;
+    }
+  }
+
+  @include breakpoint($tablet-bp) {
+    font-size: 18px;
+    line-height: 28px;
   }
 }

@@ -1,42 +1,112 @@
 .contact {
   background: #f4f4f4;
-  padding-top: 26px;
   padding-bottom: 30px;
 
-  &__form {
-    &-input {
-      display: block;
-      width: 100%;
-      height: 40px;
-      background: #ffffff;
-      border: 1px solid #f5f5f5;
-      margin-bottom: 36px;
-      padding-left: 5px;
+  @include breakpoint($tablet-bp) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+  }
 
-      &:last-child {
-          margin-bottom: 53px;
+  &::before {
+    content: "";
+    display: block;
+    max-width: 100%;
+    height: 220px;
+    margin-bottom: 26px;
+
+    background-image: url(../images/bg-images/mobile/contact.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    @include retina2x($pxr-2x, $dpi-2x, $dpp-2x) {
+      background-image: url(../images/bg-images/mobile/contact@2x.jpg);
+    }
+
+    @include retina3x($pxr-3x, $dpi-3x, $dpp-3x) {
+      background-image: url(../images/bg-images/mobile/contact@3x.jpg);
+    }
+
+    @include breakpoint($tablet-bp) {
+      flex-basis: 50%;
+      height: 349px;
+      margin: 0;
+
+      background-image: url(../images/bg-images/tablet/contact.jpg);
+
+      @include retina2x($pxr-2x, $dpi-2x, $dpp-2x) {
+        background-image: url(../images/bg-images/tablet/contact@2x.jpg);
       }
 
-      &::placeholder {
-        font-family: "Open Sans";
-        font-style: normal;
-        font-weight: normal;
-        font-size: 16px;
-        line-height: 23px;
+      @include retina3x($pxr-3x, $dpi-3x, $dpp-3x) {
+        background-image: url(../images/bg-images/tablet/contact@3x.jpg);
+      }
+    }
 
-        color: #808080;
+    @include breakpoint($desktop-bp) {
+      height: 460px;
+
+      background-image: url(../images/bg-images/desktop/contact.jpg);
+
+      @include retina2x($pxr-2x, $dpi-2x, $dpp-2x) {
+        background-image: url(../images/bg-images/desktop/contact@2x.jpg);
+      }
+
+      @include retina3x($pxr-3x, $dpi-3x, $dpp-3x) {
+        background-image: url(../images/bg-images/desktop/contact@3x.jpg);
       }
     }
   }
+}
 
-  &__title {
-    font-family: "Open Sans";
-    font-style: normal;
-    font-weight: 300;
-    font-size: 38px;
-    line-height: 48px;
-    color: #333333;
+.contact__form {
+  &-input {
+    display: block;
+    width: 100%;
+    height: 40px;
+    background: #ffffff;
+    border: 1px solid #f5f5f5;
+    margin-bottom: 36px;
+    padding-left: 5px;
 
-    margin-bottom: 34px;
+    &:last-child {
+      margin-bottom: 53px;
+    }
+
+    &::placeholder {
+      font-family: "Open Sans";
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 23px;
+
+      color: #808080;
+    }
+
+    @include breakpoint($tablet-bp) {
+      &::placeholder {
+        font-size: 18px;
+      }
+    }
+
+    @include breakpoint($desktop-bp) {
+      &::placeholder {
+        line-height: 28px;
+      }
+    }
   }
+}
+
+.contact__title {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 38px;
+  line-height: 48px;
+  color: #333333;
+
+  margin-bottom: 34px;
 }

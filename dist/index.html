@@ -17,35 +17,58 @@
 <body>
 
     <!-- <header class="header">
-  <div class="container">
-    <nav class="nav">
-      <a href="#" class="nav__logo" data-anchor="anchor">
-        <span class="nav__logo--green">Finance </span>Ledger
-        </a>
-      <ul class="nav__list">
-        <li class="nav__item">
-          <a class="nav__link" href="#home" data-anchor="anchor">Home</a>
-        </li>
-        <li class="nav__item">
-          <a class="nav__link" href="#about" data-anchor="anchor">About</a>
-        </li>
-        <li class="nav__item">
-          <a class="nav__link" href="#cases" data-anchor="anchor">Cases</a>
-        </li>
-        <li class="nav__item">
-          <a class="nav__link" href="#blog" data-anchor="anchor">Blog</a>
-        </li>
-        <li class="nav__item">
-          <a class="nav__link" href="#contact" data-anchor="anchor">Contact</a>
-        </li>
-      </ul>
-    </nav>
-  </div>
+  <nav class="nav">
+    <a href="#" class="nav__logo icon-book-open" data-anchor="anchor">
+      <span class="nav__logo--green">Finance </span>Ledger
+    </a>
+    <ul class="nav__list">
+      <li class="nav__item">
+        <a class="nav__link" href="#home" data-anchor="anchor">Home</a>
+      </li>
+      <li class="nav__item">
+        <a class="nav__link" href="#about" data-anchor="anchor">About</a>
+      </li>
+      <li class="nav__item">
+        <a class="nav__link" href="#cases" data-anchor="anchor">Cases</a>
+      </li>
+      <li class="nav__item">
+        <a class="nav__link" href="#blog" data-anchor="anchor">Blog</a>
+      </li>
+      <li class="nav__item">
+        <a class="nav__link" href="#contact" data-anchor="anchor">Contact</a>
+      </li>
+    </ul>
+  </nav>
 </header>
  -->
 
     
     <main>
+    
+        <header class="header">
+          <nav class="nav">
+            <a href="#" class="nav__logo icon-book-open" data-anchor="anchor">
+              <span class="nav__logo--green">Finance </span>Ledger
+            </a>
+            <ul class="nav__list">
+              <li class="nav__item">
+                <a class="nav__link" href="#home" data-anchor="anchor">Home</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link" href="#about" data-anchor="anchor">About</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link" href="#cases" data-anchor="anchor">Cases</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link" href="#blog" data-anchor="anchor">Blog</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link" href="#contact" data-anchor="anchor">Contact</a>
+              </li>
+            </ul>
+          </nav>
+        </header>
     
         <section class="hero" id="home">
             <div class="container">
@@ -58,32 +81,23 @@
             <div class="container">
                 <h2 class="about__title visually-hidden">Investmant banking, portfolio manager, tax and custudio</h2>
                 <ul class="about__list">
-                    <li class="about__item">
-                        <div class="about__card">
-                            <i class="fas fa-university fa-2x"></i>
-                            <h3 class="about__card-title">Investmant Banking</h3>
-                            <p class="about__card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur, necessitatibus!</p>
-                        </div>
+                    <li class="about__item icon-university">
+                        <h3 class="about__item-title">Investmant Banking</h3>
+                        <p class="about__item-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur, necessitatibus!</p>
                     </li>
-                    <li class="about__item">
-                        <div class="about__card">
-                            <i class="fas fa-book-reader fa-2x"></i>
-                            <h3 class="about__card-title">Portfolio Manager</h3>
-                            <p class="about__card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur, necessitatibus</p>
-                        </div>
+                    <li class="about__item icon-book">
+                        <h3 class="about__item-title">Portfolio Manager</h3>
+                        <p class="about__item-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur, necessitatibus</p>
                     </li>
-                    <li class="about__item">
-                        <div class="about__card">
-                            <i class="fas fa-pencil-alt fa-2x"></i>
-                            <h3 class="about__card-title">Tax & Custudio</h3>
-                            <p class="about__card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur, necessitatibus</p>
-                        </div>
+                    <li class="about__item icon-pencil">
+                        <h3 class="about__item-title">Tax & Custudio</h3>
+                        <p class="about__item-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur, necessitatibus</p>
                     </li>
                 </ul>
             </div>
         </section>
         <section class="features">
-            <div class="container">
+            <div class="container container__half-size">
                 <p class="features__uptitle">What you are looking for</p>
                 <h2 class="features__title">We provide bespoke solutions</h2>
                 <p class="features__text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate, ipsum dignissimos quae laudantium asperiores nam aliquid impedit harum illum dolore explicabo ab dolores itaque rerum temporibus doloribus iste maiores deleniti?</p>
@@ -95,36 +109,36 @@
                 <p class="cases__uptitle">This is what we do</p>
                 <h2 class="cases__title">Business Cases</h2>
                 <p class="cases__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, sapiente!</p>
-                    <ul class="cases__gallery gallery-list">
-                        <li class="gallery-list__item">
-                            <img class="gallery-list__img" src="https://placehold.it/264x176" alt="case one">
+                    <ul class="cases__grid-container">
+                        <li class="cases__grid--one">
+                            <img class="cases__grid-img" src="../../assets/images/mobile/cases/case1.jpg" alt="case one">
                         </li>
-                        <li class="gallery-list__item">
-                            <img class="gallery-list__img" src="https://placehold.it/264x176" alt="case two">
+                        <li class="cases__grid--two">
+                            <img class="cases__grid-img" src="../../assets/images/mobile/cases/case2.jpg" alt="case two">
                         </li>
-                        <li class="gallery-list__item">
-                            <img class="gallery-list__img" src="https://placehold.it/264x176" alt="case three">
+                        <li class="cases__grid--three">
+                            <img class="cases__grid-img" src="../../assets/images/mobile/cases/case3.jpg" alt="case three">
                         </li>
-                        <li class="gallery-list__item">
-                            <img class="gallery-list__img" src="https://placehold.it/264x176" alt="case four">
+                        <li class="cases__grid--four">
+                            <img class="cases__grid-img" src="../../assets/images/mobile/cases/case4.jpg" alt="case four">
                         </li>
-                        <li class="gallery-list__item">
-                            <img class="gallery-list__img" src="https://placehold.it/264x176" alt="case five">
+                        <li class="cases__grid--five">
+                            <img class="cases__grid-img" src="../../assets/images/mobile/cases/case5.jpg" alt="case five">
                         </li>
-                        <li class="gallery-list__item">
-                            <img class="gallery-list__img" src="https://placehold.it/264x176" alt="case six">
+                        <li class="cases__grid--six">
+                            <img class="cases__grid-img" src="../../assets/images/mobile/cases/case6.jpg" alt="case six">
                         </li>
-                        <li class="gallery-list__item">
-                            <img class="gallery-list__img" src="https://placehold.it/264x176" alt="case seven">
+                        <li class="cases__grid--seven">
+                            <img class="cases__grid-img" src="../../assets/images/mobile/cases/case7.jpg" alt="case seven">
                         </li>
-                        <li class="gallery-list__item">
-                            <img class="gallery-list__img" src="https://placehold.it/264x176" alt="case eight">
+                        <li class="cases__grid--eight">
+                            <img class="cases__grid-img" src="../../assets/images/mobile/cases/case8.jpg" alt="case eight">
                         </li>
                     </ul>
             </div>
         </section>
         <section class="blog" id="blog">
-            <div class="container">
+            <div class="container container__half-size">
                 <p class="blog__uptitle" datetime="2020-04-16">April 16 2020</p>
                 <h2 class="blog__title">Blog Post One</h2>
                 <p class="blog__text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate, ipsum dignissimos quae laudantium asperiores nam aliquid impedit harum illum dolore explicabo ab dolores itaque rerum temporibus doloribus iste maiores deleniti?</p>
@@ -139,41 +153,41 @@
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto,
               sapiente!
             </p>
-            <ul class="team__list">
-              <li class="team__member">
+            <ul class="team__grid-container">
+              <li class="team__grid--one">
                 <img
-                  class="team__member-avatar"
+                  class="team__avatar"
                   src="../../assets/images/mobile/team/person1.jpg"
                   alt="John Doe - President"
                 />
-                <h3 class="team__member-name">John Doe</h3>
-                <p class="team__member-position">President</p>
+                <h3 class="team__name">John Doe</h3>
+                <p class="team__position">President</p>
               </li>
-              <li class="team__member">
+              <li class="team__grid--two">
                 <img
-                  class="team__member-avatar"
+                  class="team__avatar"
                   src="../../assets/images/mobile/team/person2.jpg"
                   alt="Jane Doe - Vice president"
                 />
-                <h3 class="team__member-name">Jane Doe</h3>
-                <p class="team__member-position">Vice President</p>
+                <h3 class="team__name">Jane Doe</h3>
+                <p class="team__position">Vice President</p>
               </li>
-              <li class="team__member">
+              <li class="team__grid--three">
                 <img
-                  class="team__member-avatar"
+                  class="team__avatar"
                   src="../../assets/images/mobile/team/person3.jpg"
                   alt="Steve Smith - Marketing head"
                 />
-                <h3 class="team__member-name">Steve Smith</h3>
-                <p class="team__member-position">Marketing Head</p>
+                <h3 class="team__name">Steve Smith</h3>
+                <p class="team__position">Marketing Head</p>
               </li>
             </ul>
           </div>
         </section>
     
         <section class="contact" id="contact">
-          <div class="container">
-            <form class="contact__form" action="">
+          <div class="container container__half-size">
+            <form class="contact__form" action="" method="POST" data-netlify="true">
               <h2 class="contact__title">Request Callback</h2>
               <!-- <label for="user_name">Enter your name</label> -->
               <input

@@ -4,51 +4,103 @@
 
   background-color: $white;
 
-  &__item {
-    text-align: center;
+  @include breakpoint($tablet-bp) {
+    padding-top: 40px;
+    padding-bottom: 47px;
+  }
 
-    &:not(:last-child) {
-      margin-bottom: 20px;
+  @include breakpoint($desktop-bp) {
+    padding-bottom: 19px;
+  }
+}
+
+.about__list {
+  @include breakpoint($tablet-bp) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.about__item {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  &::before {
+    display: block;
+    content: "";
+    width: 64px;
+    height: 64px;
+    font-size: 34px;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    line-height: 64px;
+    margin-bottom: 10px;
+    border-radius: 50%;
+
+    background-color: $green;
+
+    @extend %fa-icon;
+    @extend .fas;
+
+    @include breakpoint($tablet-bp) {
+      margin-bottom: 15px;
     }
   }
 
-  &__card {
-    position: relative;
-    font-size: 18px;
-    padding-top: 75px;
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
 
-    &::before {
-      position: absolute;
-      display: block;
-      content: "";
-      width: 64px;
-      height: 64px;
-      top: 0;
-      left: 50%;
-      transform: translateX(-50%);
-      border-radius: 50%;
+  @include breakpoint($tablet-bp) {
+    width: 195px;
 
-      background-color: $green;
+    &:not(:last-child) {
+      margin: 0;
     }
+  }
 
-    .fas {
-      position: absolute;
-      top: 15px;
-      left: 50%;
-      transform: translateX(-50%);
-      color: $white;
-      font-size: 34px;
-    }
+  @include breakpoint($desktop-bp) {
+    width: 365px;
+  }
 
-    &-title {
-      @extend %subtitle;
-      color: $black;
-      margin-bottom: 15px;
-    }
+  &-title {
+    @extend %subtitle;
+    color: $black;
+    margin-bottom: 15px;
 
-    &-text {
-      @extend %text;
-      color: $black;
+    @include breakpoint($tablet-bp) {
+      font-size: 20px;
+      line-height: 33px;
+      margin-bottom: 16px;
     }
+  }
+
+  &-text {
+    @extend %text;
+    color: $black;
+    @include breakpoint($tablet-bp) {
+      font-size: 18px;
+      line-height: 28px;
+    }
+  }
+}
+
+/* ABOUT SECTION ICONS*/
+
+$icons: (
+  "university": "\f19c",
+  "book": "\f5da",
+  "pencil": "\f303"
+  );
+
+@each $icon, $name  in $icons {
+  .icon-#{$icon}::before {
+    content: $name;
   }
 }

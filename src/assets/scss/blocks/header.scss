@@ -1,54 +1,56 @@
 .header {
-  position: fixed;
-  //   display: block;
+  position: absolute;
+  display: block;
   max-width: 100%;
-  top: 0;
-  padding-top: 10px;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
   z-index: $z-index-header;
 }
 
 .nav {
-  &__logo {
-    position: relative;
-    display: inline-block;
-    @extend %subtitle;
-    font-size: 32px;
-    line-height: 42px;
-    margin-left: 45px;
-    margin-bottom: 10px;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
-    cursor: pointer;
+.nav__logo {
+  @extend %subtitle;
+  font-size: 32px;
+  line-height: 42px;
+  margin-bottom: 10px;
 
-    &::before {
-      position: absolute;
-      top: 5px;
-      left: -45px;
-      display: inline-flex;
-      content: "";
-      width: 40px;
-      height: 35px;
-      background-image: url(../images/icons/book-open.svg);
-      background-size: cover;
-      background-repeat: no-repeat;
-    }
+  cursor: pointer;
 
-    &--green {
-      color: $green;
-    }
+  &--green {
+    color: $green;
   }
+}
 
-  &__link {
-      @extend %text;
+.nav__link {
+  @extend %text;
 
-      &--active {
-          border-bottom: 2px solid $green;
-      }
+  &--active {
+    border-bottom: 2px solid $green;
   }
+}
 
-  &__list {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: nowrap;
+.nav__list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 286px;
+}
+
+.icon-book-open {
+  @extend %fa-icon;
+  @extend .fas;
+
+  &::before {
+    content: fa-content($fa-var-book-open);
+    // content: "\f518";
+    font-size: 35px;
+    color: $green;
   }
 }

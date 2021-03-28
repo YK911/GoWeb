@@ -1,0 +1,67 @@
+/* GRID VARIABLES */
+$items: (one, two, three, four, five, six, seven, eight);
+
+/* TEAM SECTION GRID TEMPLATE */
+.team__grid-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 10px 0;
+  grid-template-areas:
+    "one"
+    "two"
+    "three";
+
+  @include breakpoint($tablet-bp) {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0 20px;
+    grid-template-areas: "one two three";
+  }
+}
+
+@each $item in $items {
+  .team__grid--#{$item} {
+    grid-area: $item;
+  }
+}
+
+/* CASES SECTION GRID TEMPLATE */
+.cases__grid {
+  &-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 7px 0px;
+    grid-template-areas:
+      "one"
+      "two"
+      "three"
+      "four"
+      "five"
+      "six"
+      "seven"
+      "eight";
+
+    @include breakpoint($tablet-bp) {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      gap: 7px 8px;
+      grid-template-areas:
+        "one three five seven"
+        "two four six eight";
+    }
+  }
+
+  @each $item in $items {
+    .cases__grid--#{$item} {
+      grid-area: $item;
+    }
+  }
+
+  &-img {
+    @extend %image;
+  }
+
+
+}

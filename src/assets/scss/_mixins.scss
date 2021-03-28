@@ -5,12 +5,12 @@
   }
 
 @mixin retina2x($pxr-2x, $dpi-2x, $dpp-2x) {
-  @media only screen and (min-device-pixel-ratio: $px), (min-resolution: $dpi), (                min-resolution: $dpp-2x) {
+  @media only screen and (min-device-pixel-ratio: $pxr-2x), (min-resolution: $dpi-2x), (min-resolution: $dpp-2x) {
     @content;
   }
 }
-@mixin retina3x($pxr-2x, $dpi-2x, $dpp-2x) {
-  @media only screen and (min-device-pixel-ratio: $px), (min-resolution: $dpi), (                min-resolution: $dpp-2x) {
+@mixin retina3x($pxr-3x, $dpi-3x, $dpp-3x) {
+  @media only screen and (min-device-pixel-ratio: $pxr-3x), (min-resolution: $dpi-3x), (min-resolution: $dpp-3x) {
     @content;
   }
 }

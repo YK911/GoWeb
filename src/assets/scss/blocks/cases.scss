@@ -6,20 +6,40 @@
 
   background-color: $white;
 
-  &__uptitle {
-    @extend %subtitle;
-    margin-bottom: 15px;
+  @include breakpoint($tablet-bp) {
+    padding-top: 48px;
+    padding-bottom: 47px;
   }
 
-  &__title {
-    @extend %title;
-    padding-left:20px;
-    padding-right:20px;
-    margin-bottom: 35px;
+  @include breakpoint($desktop-bp) {
+    padding-top: 50px;
+    padding-bottom: 39px;
   }
+}
 
-  &__text {
-      @extend %text;
-      margin-bottom: 37px;
+.cases__uptitle {
+  @extend %subtitle;
+  margin-bottom: 15px;
+
+  @include breakpoint($tablet-bp) {
+    font-size: 20px;
+    line-height: 33px;
+  }
+}
+
+.cases__title {
+  @extend %title;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-bottom: 35px;
+}
+
+.cases__text {
+  @extend %text;
+  margin-bottom: 37px;
+
+  @include breakpoint($tablet-bp) {
+    font-size: 18px;
+    line-height: 28px;
   }
 }

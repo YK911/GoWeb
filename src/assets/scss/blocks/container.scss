@@ -1,18 +1,23 @@
 .container {
-  min-width: 320px;
+  max-width: 320px;
   width: 100%;
   padding-left: 30px;
   padding-right: 30px;
+  margin: 0 auto;
 
   @include breakpoint($tablet-bp) {
-    min-width: 768px;
+    max-width: 768px;
     padding-left: 28px;
     padding-right: 28px;
   }
 
-//   @include breakpoint($desktop-bp) {
-//     min-width: 1200px;
-//     padding-left: 20px;
-//     padding-right: 20px;
-//   }
+  @include breakpoint($desktop-bp) {
+    max-width: 1304px;
+  }
+
+  &__half-size {
+    @include breakpoint($tablet-bp) {
+      width: 50%;
+    }
+  }
 }

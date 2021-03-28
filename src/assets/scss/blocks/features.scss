@@ -1,22 +1,93 @@
 .features {
-    color: $white;
-    padding-top: 30px;
-    padding-bottom: 30px;
+  color: $white;
+  padding-bottom: 30px;
 
-    background-color: $green;
+  background-color: $green;
 
-    &__uptitle {
-        @extend %subtitle;
-        margin-bottom: 5px;
+  @include breakpoint($tablet-bp) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    max-width: 100%;
+    height: 220px;
+    margin-bottom: 30px;
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    /* default image */
+    background-image: url(../images/bg-images/mobile/features.jpg);
+    /* 2x screens image */
+    @include retina2x($pxr-2x, $dpi-2x, $dpp-2x) {
+      background-image: url(../images/bg-images/mobile/features@2x.jpg);
+    }
+    /* 3x screens image */
+    @include retina3x($pxr-3x, $dpi-3x, $dpp-3x) {
+      background-image: url(../images/bg-images/mobile/features@3x.jpg);
     }
 
-    &__title {
-        @extend %title;
-        margin-bottom: 25px;
+    @include breakpoint($tablet-bp) {
+      flex-basis: 50%;
+      height: 564px;
+      margin: 0;
+      /* default image */
+      background-image: url(../images/bg-images/tablet/features.jpg);
+      /* 2x screens image */
+      @include retina2x($pxr-2x, $dpi-2x, $dpp-2x) {
+        background-image: url(../images/bg-images/tablet/features@2x.jpg);
+      }
+      /* 3x screens image */
+      @include retina3x($pxr-3x, $dpi-3x, $dpp-3x) {
+        background-image: url(../images/bg-images/tablet/features@3x.jpg);
+      }
     }
 
-    &__text {
-        @extend %text;
-        margin-bottom: 15px;
+    @include breakpoint($desktop-bp) {
+      height: 460px;
+      /* default image */
+      background-image: url(../images/bg-images/desktop/features.jpg);
+      /* 2x screens image */
+      @include retina2x($pxr-2x, $dpi-2x, $dpp-2x) {
+        background-image: url(../images/bg-images/desktop/features@2x.jpg);
+      }
+      /* 3x screens image */
+      @include retina3x($pxr-3x, $dpi-3x, $dpp-3x) {
+        background-image: url(../images/bg-images/desktop/features@3x.jpg);
+      }
     }
+  }
+}
+
+.features__uptitle {
+  @extend %subtitle;
+  margin-bottom: 5px;
+
+  @include breakpoint($tablet-bp) {
+    font-size: 20px;
+    line-height: 33px;
+  }
+}
+
+.features__title {
+  @extend %title;
+  margin-bottom: 25px;
+}
+
+.features__text {
+  @extend %text;
+  margin-bottom: 15px;
+
+  @include breakpoint($tablet-bp) {
+    font-size: 18px;
+    line-height: 28px;
+    margin-bottom: 20px;
+  }
 }

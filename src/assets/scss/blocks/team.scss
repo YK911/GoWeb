@@ -6,41 +6,64 @@
 
   background-color: $white;
 
-  &__uptitle {
-    @extend %subtitle;
-    margin-bottom: 15px;
+  @include breakpoint($tablet-bp) {
+    padding-bottom: 59px;
+  }
+}
+
+.team__uptitle {
+  @extend %subtitle;
+  margin-bottom: 15px;
+
+  @include breakpoint($tablet-bp) {
+    font-size: 20px;
+    line-height: 33px;
+  }
+}
+
+.team__title {
+  @extend %title;
+  margin-bottom: 35px;
+}
+
+.team__text {
+  @extend %text;
+  margin-bottom: 35px;
+
+  @include breakpoint($tablet-bp) {
+    font-size: 18px;
+    line-height: 28px;
+    margin-bottom: 49px;
   }
 
-  &__title {
-    @extend %title;
-    margin-bottom: 35px;
+  @include breakpoint($desktop-bp) {
+    margin-bottom: 45px;
   }
+}
 
-  &__text {
-    @extend %text;
-    margin-bottom: 35px;
+.team__avatar {
+  @extend %image;
+  margin-bottom: 15px;
+}
+
+.team__name {
+  @extend %text;
+  font-size: 23px;
+  line-height: 29px;
+
+  margin-bottom: 12px;
+
+  @include breakpoint($tablet-bp) {
+    font-size: 25px;
+    line-height: 32px;
   }
+}
 
-  &__member {
-    &:not(:last-child) {
-      margin-bottom: 10px;
-    }
+.team__position {
+  @extend %text;
 
-    &-avatar {
-      @extend %image;
-      margin-bottom: 15px;
-    }
-
-    &-name {
-      @extend %text;
-      font-size: 23px;
-      line-height: 29px;
-
-      margin-bottom: 10px;
-    }
-
-    &-position {
-      @extend %text;
-    }
+  @include breakpoint($tablet-bp) {
+    font-size: 18px;
+    line-height: 28px;
   }
 }
